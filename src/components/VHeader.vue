@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="mx-20 flex items-center justify-between space-x-4 px-12">
-          <VLanguageSwitch />
+          <!--          <VLanguageSwitch />-->
           <VThemeButton />
         </div>
       </div>
@@ -37,7 +37,7 @@
           <span class="ml-3 self-center whitespace-nowrap text-lg font-semibold dark:text-white">NuxtStartKit</span>
         </div>
         <div class="flex items-center justify-between space-x-4 py-3">
-          <VLanguageSwitch />
+          <!--          <VLanguageSwitch />-->
           <VThemeButton />
         </div>
       </div>
