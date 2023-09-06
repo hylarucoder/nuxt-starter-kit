@@ -1,6 +1,5 @@
 import { defineNuxtConfig } from "nuxt/config"
 import svgLoader from "vite-svg-loader"
-import { pwa } from "./src/config/pwa"
 import { appDescription } from "./src/constants"
 
 export default defineNuxtConfig({
@@ -120,7 +119,12 @@ export default defineNuxtConfig({
       },
     },
   },
-
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   i18n: {
     locales: ["en", "zh_CN"],
     defaultLocale: "en",
@@ -128,7 +132,7 @@ export default defineNuxtConfig({
     vueI18n: "./i18n.config.ts", // if you are using custom path, default
   },
 
-  pwa,
+  // pwa,
 
   devtools: {
     enabled: true,

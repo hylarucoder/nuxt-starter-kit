@@ -14,3 +14,5 @@ export const useTrans = () => {
     setLocale,
   }
 }
+
+export default useTrans
