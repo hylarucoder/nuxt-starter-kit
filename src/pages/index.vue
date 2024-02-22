@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+definePageMeta({ auth: false })
+
+</script>
 <template>
   <NuxtLayout>
     <div class="w-full px-5 pb-5 sm:px-40 sm:pt-10">
@@ -7,28 +11,8 @@
         </div>
       </div>
     </div>
-    <div class="mx-auto mt-5 max-w-5xl px-5">
-      <h3 class="text-xl font-bold">
-        Authentication Overview
-      </h3>
-      <p class="text-sm">
-        See all available authentication & session information below.
-      </p>
-      <pre v-if="status"><span>Status:</span> {{ status }}</pre>
-      <pre v-if="data"><span>Data:</span> {{ data }}</pre>
-      <pre v-if="csrfToken"><span>CSRF Token:</span> {{ csrfToken }}</pre>
-      <pre v-if="providers"><span>Providers:</span> {{ providers }}</pre>
-    </div>
-    <AuthenticationStatus />
   </NuxtLayout>
 </template>
-<script lang="ts" setup>
-const { data, status, getCsrfToken, getProviders } = useAuth()
-definePageMeta({ auth: false })
-
-const providers = await getProviders()
-const csrfToken = await getCsrfToken()
-</script>
 
 <style scoped>
 pre {
