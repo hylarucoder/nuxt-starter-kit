@@ -18,7 +18,11 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxt/content",
     "@nuxt/ui",
+    "@nuxtjs/tailwindcss",
   ],
+  tailwindcss: {
+    configPath: "./tailwind.config.cjs",
+  },
   ui: {
     icons: ["mdi", "lucide", "vscode-icons", "fa6-brands"],
   },
@@ -105,8 +109,8 @@ export default defineNuxtConfig({
     vueI18n: "./i18n.config.ts", // if you are using custom path, default
   },
 
-  devtools: {
-    enabled: true,
-  },
+  // devtools: {
+  //   enabled: true,
+  // },
   ssr: false,
 })
