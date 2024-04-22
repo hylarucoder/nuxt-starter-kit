@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
+    "@nuxt/eslint",
   ],
   tailwindcss: {
     configPath: "./tailwind.config.cjs",
